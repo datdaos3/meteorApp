@@ -1,0 +1,52 @@
+<head>
+  <title>meteorApp</title>
+</head>
+
+<body>
+  <h1>Welcome to Meteor!</h1>
+
+  <!--{{> hello}}-->
+  {{> info}}
+
+  {{> bookList}}
+
+  <div>
+      {{> myTemplate}}
+  </div>
+</body>
+
+<template name="hello">
+    <h3>Here are your books:</h3>
+    <h3>Here are your books:</h3>
+    <UL>
+        {{#each books}}
+            <LI><i>{{title}}</i> by {{author}}</LI>
+        {{/each}}
+    </UL>
+</template>
+
+<template name="bookList">
+    <h3>Here are some books:</h3>
+    <UL>
+        {{#each books}}
+            <LI><i>{{title}}</i> by {{author}}</LI>
+        {{/each}}
+    </UL>
+</template>
+
+
+<template name="info">
+  <h2>Learn Meteor!</h2>
+  <ul>
+    <li><a href="https://www.meteor.com/try" target="_blank">Do the Tutorial</a></li>
+    <li><a href="http://guide.meteor.com" target="_blank">Follow the Guide</a></li>
+    <li><a href="https://docs.meteor.com" target="_blank">Read the Docs</a></li>
+    <li><a href="https://forums.meteor.com" target="_blank">Discussions</a></li>
+  </ul>
+</template>
+
+<template name = "myTemplate">
+    <p>PARAGRAPH...</p>
+    <button class = "myClass">CLASS</button>
+    <button id = "myId">ID</button>
+</template>
